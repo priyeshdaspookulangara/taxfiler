@@ -21,6 +21,12 @@ switch ($method) {
         if (isset($_GET['id'])) {
             $task = getTaskById($_GET['id']);
             if ($task) {
+                // Security Check: Staff can only view their own tasks
+                if ($user['role'] === 'staff' && $task['assigned_to'] != $user['id']) {
+                    http_response_code(403);
+                    echo json_encode(['error' => 'Forbidden']);
+                    exit();
+                }
                 $task['comments'] = getCommentsForTask($task['id']);
                 echo json_encode($task);
             } else {
@@ -28,7 +34,7 @@ switch ($method) {
                 echo json_encode(['error' => 'Task not found']);
             }
         } else {
-            $tasks = getAllTasks();
+            $tasks = getAllTasks($user['id'], $user['role']);
             echo json_encode($tasks);
         }
         break;
@@ -54,14 +60,14 @@ switch ($method) {
                 exit();
             }
             $status = $input['status'];
-            $result = updateTaskStatus($taskId, $status, $user['id'], $comment);
+            $result = updateTaskStatus($taskId, $status, $user['id'], $comment, $user['role']);
         } elseif ($action === 'flag_doubt') {
             if (!$comment) {
                 http_response_code(400);
                 echo json_encode(['error' => 'Comment required for flagging doubt']);
                 exit();
             }
-            $result = flagDoubt($taskId, $user['id'], $comment);
+            $result = flagDoubt($taskId, $user['id'], $comment, $user['role']);
         } else {
             http_response_code(400);
             echo json_encode(['error' => 'Invalid action']);

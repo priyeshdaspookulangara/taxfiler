@@ -200,6 +200,11 @@ table th {
     color: #721c24;
 }
 
+.alert.success {
+    background: #d4edda;
+    color: #155724;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     header h1, header .user-info {

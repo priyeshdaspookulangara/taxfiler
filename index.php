@@ -23,15 +23,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($action === 'update_status') {
         $status = $_POST['status'] ?? '';
-        updateTaskStatus($taskId, $status, $user_id, $comment);
+        updateTaskStatus($taskId, $status, $user_id, $comment, $_SESSION['role']);
     } elseif ($action === 'flag_doubt') {
-        flagDoubt($taskId, $user_id, $comment);
+        flagDoubt($taskId, $user_id, $comment, $_SESSION['role']);
+    } elseif ($action === 'assign_task' && $_SESSION['role'] === 'admin') {
+        $staffId = $_POST['staff_id'] ?? 0;
+        assignTask($taskId, $staffId, $user_id);
     }
     header("Location: index.php");
     exit();
 }
 
-$tasks = getAllTasks();
+$role = $_SESSION['role'];
+$tasks = getAllTasks($user_id, $role);
+$staffUsers = ($role === 'admin') ? getStaffUsers() : [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,8 +64,9 @@ $tasks = getAllTasks();
                 <table>
                     <thead>
                         <tr>
-                            <th>Title</th>
+                            <th>Customer & Title</th>
                             <th>Status</th>
+                            <th>Assigned To</th>
                             <th>Last Updated</th>
                             <th>Actions</th>
                         </tr>
@@ -69,13 +75,21 @@ $tasks = getAllTasks();
                         <?php foreach ($tasks as $task): ?>
                             <tr>
                                 <td>
+                                    <div class="customer-info">
+                                        <strong><?php echo htmlspecialchars($task['customer_name'] ?? 'N/A'); ?></strong>
+                                        <span class="desc">(<?php echo htmlspecialchars($task['customer_email'] ?? 'N/A'); ?>)</span>
+                                    </div>
                                     <strong><?php echo htmlspecialchars($task['title']); ?></strong>
                                     <p class="desc"><?php echo htmlspecialchars($task['description'] ?? ''); ?></p>
                                 </td>
                                 <td><span class="status-badge <?php echo strtolower($task['status']); ?>"><?php echo htmlspecialchars($task['status']); ?></span></td>
+                                <td><?php echo htmlspecialchars($task['assigned_staff'] ?? 'Unassigned'); ?></td>
                                 <td><?php echo htmlspecialchars($task['updated_at']); ?></td>
                                 <td>
                                     <button class="btn-sm" onclick="showActionModal(<?php echo $task['id']; ?>, '<?php echo $task['status']; ?>')">Update</button>
+                                    <?php if ($role === 'admin'): ?>
+                                        <button class="btn-sm" onclick="showAssignModal(<?php echo $task['id']; ?>)">Assign</button>
+                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -119,7 +133,43 @@ $tasks = getAllTasks();
         </div>
     </div>
 
+    <!-- Assignment Modal -->
+    <div id="assignModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAssignModal()">&times;</span>
+            <h3>Assign Staff</h3>
+            <form method="POST">
+                <input type="hidden" name="csrf_token" value="<?php echo generateCsrfToken(); ?>">
+                <input type="hidden" name="task_id" id="assignTaskId">
+                <input type="hidden" name="action" value="assign_task">
+
+                <div class="form-group">
+                    <label for="staff_id">Select Staff</label>
+                    <select name="staff_id" id="staff_id" required>
+                        <option value="">-- Choose Staff --</option>
+                        <?php foreach ($staffUsers as $staff): ?>
+                            <option value="<?php echo $staff['id']; ?>"><?php echo htmlspecialchars($staff['username']); ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+                <div class="modal-buttons">
+                    <button type="submit" class="btn">Assign Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
+        function showAssignModal(id) {
+            document.getElementById('assignTaskId').value = id;
+            document.getElementById('assignModal').style.display = "block";
+        }
+
+        function closeAssignModal() {
+            document.getElementById('assignModal').style.display = "none";
+        }
+
         function showActionModal(id, status) {
             document.getElementById('modalTaskId').value = id;
             document.getElementById('modalStatus').value = status;
@@ -143,6 +193,9 @@ $tasks = getAllTasks();
         window.onclick = function(event) {
             if (event.target == document.getElementById('actionModal')) {
                 closeModal();
+            }
+            if (event.target == document.getElementById('assignModal')) {
+                closeAssignModal();
             }
         }
     </script>

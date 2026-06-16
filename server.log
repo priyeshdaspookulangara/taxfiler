@@ -1,34 +1,61 @@
-[Tue Jun 16 10:20:31 2026] PHP 8.3.6 Development Server (http://localhost:8000) started
-[Tue Jun 16 10:20:34 2026] [::1]:44616 Accepted
-[Tue Jun 16 10:20:34 2026] [::1]:44616 [200]: GET /login.php
-[Tue Jun 16 10:20:34 2026] [::1]:44616 Closing
-[Tue Jun 16 10:20:34 2026] [::1]:44620 Accepted
-[Tue Jun 16 10:20:34 2026] [::1]:44620 [200]: GET /css/style.css
-[Tue Jun 16 10:20:34 2026] [::1]:44620 Closing
-[Tue Jun 16 10:20:34 2026] [::1]:34008 Accepted
-[Tue Jun 16 10:20:34 2026] [::1]:34008 [302]: POST /login.php
-[Tue Jun 16 10:20:34 2026] [::1]:34008 Closing
-[Tue Jun 16 10:20:34 2026] [::1]:34010 Accepted
-[Tue Jun 16 10:20:34 2026] [::1]:34010 [200]: GET /index.php
-[Tue Jun 16 10:20:34 2026] [::1]:34010 Closing
-[Tue Jun 16 10:20:34 2026] [::1]:34014 Accepted
-[Tue Jun 16 10:20:34 2026] [::1]:34014 [200]: GET /css/style.css
-[Tue Jun 16 10:20:34 2026] [::1]:34014 Closing
-[Tue Jun 16 10:20:37 2026] [::1]:34020 Accepted
-[Tue Jun 16 10:20:37 2026] [::1]:34020 [302]: POST /index.php
-[Tue Jun 16 10:20:37 2026] [::1]:34020 Closing
-[Tue Jun 16 10:20:37 2026] [::1]:34036 Accepted
-[Tue Jun 16 10:20:37 2026] [::1]:34036 [200]: GET /index.php
-[Tue Jun 16 10:20:37 2026] [::1]:34036 Closing
-[Tue Jun 16 10:20:37 2026] [::1]:34048 Accepted
-[Tue Jun 16 10:20:37 2026] [::1]:34048 [200]: GET /css/style.css
-[Tue Jun 16 10:20:37 2026] [::1]:34048 Closing
-[Tue Jun 16 10:20:38 2026] [::1]:34060 Accepted
-[Tue Jun 16 10:20:38 2026] [::1]:34060 [302]: POST /index.php
-[Tue Jun 16 10:20:38 2026] [::1]:34060 Closing
-[Tue Jun 16 10:20:38 2026] [::1]:34072 Accepted
-[Tue Jun 16 10:20:38 2026] [::1]:34072 [200]: GET /index.php
-[Tue Jun 16 10:20:38 2026] [::1]:34072 Closing
-[Tue Jun 16 10:20:38 2026] [::1]:34088 Accepted
-[Tue Jun 16 10:20:38 2026] [::1]:34088 [200]: GET /css/style.css
-[Tue Jun 16 10:20:38 2026] [::1]:34088 Closing
+[Tue Jun 16 10:30:23 2026] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Tue Jun 16 10:30:28 2026] [::1]:56016 Accepted
+[Tue Jun 16 10:30:28 2026] [::1]:56016 [200]: GET /raise_ticket.php
+[Tue Jun 16 10:30:28 2026] [::1]:56016 Closing
+[Tue Jun 16 10:30:28 2026] [::1]:56018 Accepted
+[Tue Jun 16 10:30:28 2026] [::1]:56018 [200]: GET /css/style.css
+[Tue Jun 16 10:30:28 2026] [::1]:56018 Closing
+[Tue Jun 16 10:30:29 2026] [::1]:56020 Accepted
+[Tue Jun 16 10:30:29 2026] [::1]:56020 [200]: POST /raise_ticket.php
+[Tue Jun 16 10:30:29 2026] [::1]:56020 Closing
+[Tue Jun 16 10:30:29 2026] [::1]:56034 Accepted
+[Tue Jun 16 10:30:29 2026] [::1]:56034 [200]: GET /css/style.css
+[Tue Jun 16 10:30:29 2026] [::1]:56034 Closing
+[Tue Jun 16 10:30:30 2026] [::1]:56036 Accepted
+[Tue Jun 16 10:30:30 2026] [::1]:56036 [200]: GET /login.php
+[Tue Jun 16 10:30:30 2026] [::1]:56036 Closing
+[Tue Jun 16 10:30:30 2026] [::1]:56044 Accepted
+[Tue Jun 16 10:30:30 2026] [::1]:56044 [200]: GET /css/style.css
+[Tue Jun 16 10:30:30 2026] [::1]:56044 Closing
+[Tue Jun 16 10:30:30 2026] [::1]:56050 Accepted
+[Tue Jun 16 10:30:30 2026] [::1]:56050 [302]: POST /login.php
+[Tue Jun 16 10:30:30 2026] [::1]:56050 Closing
+[Tue Jun 16 10:30:30 2026] [::1]:56060 Accepted
+[Tue Jun 16 10:30:30 2026] [::1]:56060 [200]: GET /index.php
+[Tue Jun 16 10:30:30 2026] [::1]:56060 Closing
+[Tue Jun 16 10:30:30 2026] [::1]:56072 Accepted
+[Tue Jun 16 10:30:30 2026] [::1]:56072 [200]: GET /css/style.css
+[Tue Jun 16 10:30:30 2026] [::1]:56072 Closing
+[Tue Jun 16 10:30:32 2026] [::1]:56086 Accepted
+[Tue Jun 16 10:30:32 2026] [::1]:56086 [302]: POST /index.php
+[Tue Jun 16 10:30:32 2026] [::1]:56086 Closing
+[Tue Jun 16 10:30:32 2026] [::1]:56092 Accepted
+[Tue Jun 16 10:30:32 2026] [::1]:56092 [200]: GET /index.php
+[Tue Jun 16 10:30:32 2026] [::1]:56092 Closing
+[Tue Jun 16 10:30:32 2026] [::1]:56104 Accepted
+[Tue Jun 16 10:30:32 2026] [::1]:56104 [200]: GET /css/style.css
+[Tue Jun 16 10:30:32 2026] [::1]:56104 Closing
+[Tue Jun 16 10:30:33 2026] [::1]:56116 Accepted
+[Tue Jun 16 10:30:33 2026] [::1]:56116 [302]: GET /logout.php
+[Tue Jun 16 10:30:33 2026] [::1]:56116 Closing
+[Tue Jun 16 10:30:33 2026] [::1]:56122 Accepted
+[Tue Jun 16 10:30:33 2026] [::1]:56122 [200]: GET /login.php
+[Tue Jun 16 10:30:33 2026] [::1]:56122 Closing
+[Tue Jun 16 10:30:33 2026] [::1]:56128 Accepted
+[Tue Jun 16 10:30:33 2026] [::1]:56128 [200]: GET /css/style.css
+[Tue Jun 16 10:30:33 2026] [::1]:56128 Closing
+[Tue Jun 16 10:30:33 2026] [::1]:56144 Accepted
+[Tue Jun 16 10:30:33 2026] [::1]:56144 [200]: GET /login.php
+[Tue Jun 16 10:30:33 2026] [::1]:56144 Closing
+[Tue Jun 16 10:30:33 2026] [::1]:56160 Accepted
+[Tue Jun 16 10:30:33 2026] [::1]:56160 [200]: GET /css/style.css
+[Tue Jun 16 10:30:33 2026] [::1]:56160 Closing
+[Tue Jun 16 10:30:33 2026] [::1]:56162 Accepted
+[Tue Jun 16 10:30:33 2026] [::1]:56162 [302]: POST /login.php
+[Tue Jun 16 10:30:33 2026] [::1]:56162 Closing
+[Tue Jun 16 10:30:33 2026] [::1]:56168 Accepted
+[Tue Jun 16 10:30:33 2026] [::1]:56168 [200]: GET /index.php
+[Tue Jun 16 10:30:33 2026] [::1]:56168 Closing
+[Tue Jun 16 10:30:33 2026] [::1]:56178 Accepted
+[Tue Jun 16 10:30:33 2026] [::1]:56178 [200]: GET /css/style.css
+[Tue Jun 16 10:30:33 2026] [::1]:56178 Closing
