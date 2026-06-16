@@ -1,0 +1,34 @@
+[Tue Jun 16 10:20:31 2026] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Tue Jun 16 10:20:34 2026] [::1]:44616 Accepted
+[Tue Jun 16 10:20:34 2026] [::1]:44616 [200]: GET /login.php
+[Tue Jun 16 10:20:34 2026] [::1]:44616 Closing
+[Tue Jun 16 10:20:34 2026] [::1]:44620 Accepted
+[Tue Jun 16 10:20:34 2026] [::1]:44620 [200]: GET /css/style.css
+[Tue Jun 16 10:20:34 2026] [::1]:44620 Closing
+[Tue Jun 16 10:20:34 2026] [::1]:34008 Accepted
+[Tue Jun 16 10:20:34 2026] [::1]:34008 [302]: POST /login.php
+[Tue Jun 16 10:20:34 2026] [::1]:34008 Closing
+[Tue Jun 16 10:20:34 2026] [::1]:34010 Accepted
+[Tue Jun 16 10:20:34 2026] [::1]:34010 [200]: GET /index.php
+[Tue Jun 16 10:20:34 2026] [::1]:34010 Closing
+[Tue Jun 16 10:20:34 2026] [::1]:34014 Accepted
+[Tue Jun 16 10:20:34 2026] [::1]:34014 [200]: GET /css/style.css
+[Tue Jun 16 10:20:34 2026] [::1]:34014 Closing
+[Tue Jun 16 10:20:37 2026] [::1]:34020 Accepted
+[Tue Jun 16 10:20:37 2026] [::1]:34020 [302]: POST /index.php
+[Tue Jun 16 10:20:37 2026] [::1]:34020 Closing
+[Tue Jun 16 10:20:37 2026] [::1]:34036 Accepted
+[Tue Jun 16 10:20:37 2026] [::1]:34036 [200]: GET /index.php
+[Tue Jun 16 10:20:37 2026] [::1]:34036 Closing
+[Tue Jun 16 10:20:37 2026] [::1]:34048 Accepted
+[Tue Jun 16 10:20:37 2026] [::1]:34048 [200]: GET /css/style.css
+[Tue Jun 16 10:20:37 2026] [::1]:34048 Closing
+[Tue Jun 16 10:20:38 2026] [::1]:34060 Accepted
+[Tue Jun 16 10:20:38 2026] [::1]:34060 [302]: POST /index.php
+[Tue Jun 16 10:20:38 2026] [::1]:34060 Closing
+[Tue Jun 16 10:20:38 2026] [::1]:34072 Accepted
+[Tue Jun 16 10:20:38 2026] [::1]:34072 [200]: GET /index.php
+[Tue Jun 16 10:20:38 2026] [::1]:34072 Closing
+[Tue Jun 16 10:20:38 2026] [::1]:34088 Accepted
+[Tue Jun 16 10:20:38 2026] [::1]:34088 [200]: GET /css/style.css
+[Tue Jun 16 10:20:38 2026] [::1]:34088 Closing
