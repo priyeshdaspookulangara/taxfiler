@@ -35,7 +35,7 @@ switch ($method) {
             }
         } else {
             $tasks = getAllTasks($user['id'], $user['role']);
-            echo json_encode($tasks);
+            echo json_encode(['success' => true, 'tasks' => $tasks]);
         }
         break;
 

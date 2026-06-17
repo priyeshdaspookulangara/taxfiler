@@ -30,7 +30,17 @@ function logout() {
 }
 
 function validateApiToken() {
-    $headers = getallheaders();
+    if (function_exists('getallheaders')) {
+        $headers = getallheaders();
+    } else {
+        $headers = [];
+        foreach ($_SERVER as $name => $value) {
+            if (substr($name, 0, 5) == 'HTTP_') {
+                $headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value;
+            }
+        }
+    }
+
     if (!isset($headers['Authorization'])) {
         return null;
     }
