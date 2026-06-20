@@ -1,0 +1,43 @@
+[Sat Jun 20 08:36:23 2026] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Sat Jun 20 08:36:27 2026] [::1]:60112 Accepted
+[Sat Jun 20 08:36:27 2026] [::1]:60112 [200]: GET /raise_ticket.php
+[Sat Jun 20 08:36:27 2026] [::1]:60112 Closing
+[Sat Jun 20 08:36:27 2026] [::1]:60124 Accepted
+[Sat Jun 20 08:36:27 2026] [::1]:60124 [200]: GET /css/style.css
+[Sat Jun 20 08:36:27 2026] [::1]:60124 Closing
+[Sat Jun 20 08:36:28 2026] [::1]:60128 Accepted
+[Sat Jun 20 08:36:28 2026] [::1]:60128 [200]: POST /raise_ticket.php
+[Sat Jun 20 08:36:28 2026] [::1]:60128 Closing
+[Sat Jun 20 08:36:28 2026] [::1]:60136 Accepted
+[Sat Jun 20 08:36:28 2026] [::1]:60136 [200]: GET /css/style.css
+[Sat Jun 20 08:36:28 2026] [::1]:60136 Closing
+[Sat Jun 20 08:36:29 2026] [::1]:60146 Accepted
+[Sat Jun 20 08:36:29 2026] [::1]:60146 [200]: GET /login.php
+[Sat Jun 20 08:36:29 2026] [::1]:60146 Closing
+[Sat Jun 20 08:36:29 2026] [::1]:60154 Accepted
+[Sat Jun 20 08:36:29 2026] [::1]:60154 [302]: POST /login.php
+[Sat Jun 20 08:36:29 2026] [::1]:60154 Closing
+[Sat Jun 20 08:36:29 2026] [::1]:60168 Accepted
+[Sat Jun 20 08:36:29 2026] [::1]:60168 [200]: GET /index.php
+[Sat Jun 20 08:36:29 2026] [::1]:60168 Closing
+[Sat Jun 20 08:36:31 2026] [::1]:60172 Accepted
+[Sat Jun 20 08:36:31 2026] [::1]:60172 [302]: POST /index.php
+[Sat Jun 20 08:36:31 2026] [::1]:60172 Closing
+[Sat Jun 20 08:36:31 2026] [::1]:60186 Accepted
+[Sat Jun 20 08:36:31 2026] [::1]:60186 [200]: GET /index.php
+[Sat Jun 20 08:36:31 2026] [::1]:60186 Closing
+[Sat Jun 20 08:36:32 2026] [::1]:60196 Accepted
+[Sat Jun 20 08:36:32 2026] [::1]:60196 [302]: GET /logout.php
+[Sat Jun 20 08:36:32 2026] [::1]:60196 Closing
+[Sat Jun 20 08:36:32 2026] [::1]:60202 Accepted
+[Sat Jun 20 08:36:32 2026] [::1]:60202 [200]: GET /login.php
+[Sat Jun 20 08:36:32 2026] [::1]:60202 Closing
+[Sat Jun 20 08:36:32 2026] [::1]:60210 Accepted
+[Sat Jun 20 08:36:32 2026] [::1]:60210 [200]: GET /login.php
+[Sat Jun 20 08:36:32 2026] [::1]:60210 Closing
+[Sat Jun 20 08:36:32 2026] [::1]:60216 Accepted
+[Sat Jun 20 08:36:32 2026] [::1]:60216 [302]: POST /login.php
+[Sat Jun 20 08:36:32 2026] [::1]:60216 Closing
+[Sat Jun 20 08:36:32 2026] [::1]:60224 Accepted
+[Sat Jun 20 08:36:32 2026] [::1]:60224 [200]: GET /index.php
+[Sat Jun 20 08:36:32 2026] [::1]:60224 Closing
